@@ -9,18 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var BugListComponent = (function () {
+    function BugListComponent() {
     }
-    AppComponent = __decorate([
+    BugListComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n    <navbar></navbar>\n    <div class=\"container\">\n        <router-outlet></router-outlet>\n    </div>\n    ",
-            styles: ["\n        .container {\n            margin-top: 2rem;\n        }\n    "]
+            moduleId: module.id,
+            selector: 'bug-list',
+            templateUrl: 'bug-list.component.html',
+            styleUrls: ['bug-list.component.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], BugListComponent);
+    return BugListComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.BugListComponent = BugListComponent;
+//# sourceMappingURL=bug-list.component.js.map

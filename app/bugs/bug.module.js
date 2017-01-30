@@ -8,19 +8,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+// Modules
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var shared_module_1 = require('../shared/shared.module');
+var bug_routing_module_1 = require('./bug-routing.module');
+// Components
+var bug_list_component_1 = require('./bug-list/bug-list.component');
+var BugModule = (function () {
+    function BugModule() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: "\n    <navbar></navbar>\n    <div class=\"container\">\n        <router-outlet></router-outlet>\n    </div>\n    ",
-            styles: ["\n        .container {\n            margin-top: 2rem;\n        }\n    "]
+    BugModule = __decorate([
+        core_1.NgModule({
+            imports: [shared_module_1.SharedModule, bug_routing_module_1.BugRoutingModule],
+            declarations: [bug_list_component_1.BugListComponent],
+            exports: [],
+            providers: []
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], BugModule);
+    return BugModule;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.BugModule = BugModule;
+//# sourceMappingURL=bug.module.js.map
