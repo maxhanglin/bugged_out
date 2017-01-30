@@ -5,11 +5,15 @@ import {BugRoutingModule} from './bug-routing.module';
 
 // Components
 import {BugListComponent} from './bug-list/bug-list.component';
+import {BugDetailComponent} from './bug-detail/bug-detail.component';
+
+// Service
+import {BugService} from './service/bug.service';
 
 @NgModule({
     imports: [SharedModule, BugRoutingModule],
-    declarations: [BugListComponent],
+    declarations: [BugListComponent, BugDetailComponent],
     exports: [],
-    providers: []
+    providers: [BugService]
 })
 export class BugModule {}
